@@ -42,7 +42,7 @@ const EmotionKeywordCard = () => {
       <StyleStatusWrapper>
         {data ? (
           data.map(({ title, count }, index) => (
-            <StyleStatus>
+            <StyleStatus key={'감정키워드상태_' + title}>
               {index === maxCountIndex(data) ? (
                 <>
                   <StyleStatusText color='var(--point-color)'>{title}</StyleStatusText>
@@ -96,13 +96,13 @@ const StyleBestEmotion = styled.div`
   }
 `;
 
-const StyleStatusWrapper = styled.div`
+const StyleStatusWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   width: 216px;
 `;
 
-const StyleStatus = styled.div`
+const StyleStatus = styled.li`
   display: flex;
   align-items: center;
   & + & {
