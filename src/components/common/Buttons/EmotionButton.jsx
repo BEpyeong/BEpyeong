@@ -37,19 +37,22 @@ const EmotionButton = ({ possibleClicked = true, clickedImg = false, isText = fa
     { title: '평범해요', clickedImg: NOTBAD_ON_EMOTION, defaultImg: NOTBAD_OFF_EMOTION },
   ];
 
-  const renderEmotion = emotionList.find(({ title }) => {
-    return title === emotionTitle;
-  });
+  const renderEmotion = (emotionList, emotionTitle) => {
+    return emotionList.find(({ title }) => {
+      return title === emotionTitle;
+    });
+  };
 
+  const selectedEmotionImg = renderEmotion(emotionList, emotionTitle);
   return (
     <>
-      {renderEmotion && (
+      {selectedEmotionImg && (
         <StyleButton onClick={onClickedButton}>
           <img
-            src={isClicked === true ? renderEmotion.clickedImg : renderEmotion.defaultImg}
-            alt={renderEmotion.title + '의 감정키워드 이미지'}
+            src={isClicked === true ? selectedEmotionImg.clickedImg : selectedEmotionImg.defaultImg}
+            alt={selectedEmotionImg.title + '의 감정키워드 이미지'}
           />
-          {isText ? <StyleText isClicked={isClicked}>{renderEmotion.title}</StyleText> : <></>}
+          {isText ? <StyleText isClicked={isClicked}>{selectedEmotionImg.title}</StyleText> : <></>}
         </StyleButton>
       )}
     </>
