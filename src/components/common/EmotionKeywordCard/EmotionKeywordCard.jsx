@@ -21,7 +21,7 @@ const EmotionKeywordCard = () => {
 
   const findMaxCount = (data) => {
     return Math.max.apply(
-      Math,
+      null,
       data.map(({ count }) => {
         return count;
       }),
