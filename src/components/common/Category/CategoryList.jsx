@@ -12,18 +12,18 @@ const CategoryList = ({ another }) => {
       <ListWrapper>
         <ListItem>작성한 글 목록</ListItem>
         <ListItem>평가한 글 목록</ListItem>
-        {another.length >= 1 ? another.map((data, index) => <ListItem>{data}</ListItem>) : ''}
+        {another.length ? another.map((data, index) => <ListItem key={index}>{data}</ListItem>) : <></>}
       </ListWrapper>
 
       <ListWrapper>
         <ListItem>개인정보 변경</ListItem>
-        {another.length >= 1 ? another.map((data, index) => <ListItem>{data}</ListItem>) : ''}
+        {another.length ? another.map((data, index) => <ListItem key={index}>{data}</ListItem>) : <></>}
       </ListWrapper>
 
       <ListWrapper>
         <ListItem>이용문의</ListItem>
         <ListItem>이용정보</ListItem>
-        {another.length >= 1 ? another.map((data, index) => <ListItem>{data}</ListItem>) : ''}
+        {another.length ? another.map((data, index) => <ListItem key={index}>{data}</ListItem>) : <></>}
       </ListWrapper>
     </>
   );
