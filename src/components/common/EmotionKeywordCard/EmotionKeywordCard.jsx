@@ -29,7 +29,8 @@ const EmotionKeywordCard = () => {
   };
 
   const maxCountIndex = (data) => {
-    return data.findIndex((object) => object.count === findMaxCount(data));
+    const FIND_MAX_COUNT = findMaxCount(data);
+    return data.findIndex((object) => object.count === FIND_MAX_COUNT);
   };
 
   return (
