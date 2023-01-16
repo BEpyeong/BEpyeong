@@ -5,7 +5,8 @@ const BasicButton = ({
   children,
   size,
   disabled,
-  backgroundColor = 'var(--main-color)',
+  backgroundColor = 'var(--main-color)', // 취소 기본 배경: #D1D1D1
+  activeBgColor = 'var(--point-color)', // 취소 액티브 배경: #E9E9E9
   textColor = 'var(--bg-color)',
   type,
   onClickHandler,
@@ -16,6 +17,7 @@ const BasicButton = ({
       size={size}
       disabled={disabled}
       backgroundColor={backgroundColor}
+      activeBgColor={activeBgColor}
       textColor={textColor}
       type={type}
       onClick={onClickHandler}
@@ -37,12 +39,8 @@ const ButtonSize = css`
           height: 56px;
           border-radius: 16px;
 
-          & {
-            background: ${(props) => (props.disabled === true ? 'var(--sub-color)' : 'var(--main-color)')};
-          }
-
           &:active:not(:disabled) {
-            background: var(--point-color);
+            background: ${(props) => props.activeBgColor};
           }
         `;
 
@@ -52,12 +50,8 @@ const ButtonSize = css`
           height: 48px;
           border-radius: 16px;
 
-          & {
-            background: ${(props) => (props.disabled === true ? 'var(--sub-color)' : 'var(--main-color)')};
-          }
-
           &:active:not(:disabled) {
-            background: var(--point-color);
+            background: ${(props) => props.activeBgColor};
           }
         `;
 
@@ -67,12 +61,8 @@ const ButtonSize = css`
           height: 54px;
           border-radius: 16px;
 
-          & {
-            background: ${(props) => (props.children === '등록하기' ? 'var(--main-color)' : '#E9E9E9')};
-          }
-
-          &:active {
-            background: ${(props) => (props.children === '등록하기' ? 'var(--point-color)' : '#D1D1D1')};
+          &:active:not(:disabled) {
+            background: ${(props) => props.activeBgColor};
           }
         `;
 
@@ -82,12 +72,8 @@ const ButtonSize = css`
           height: 36px;
           border-radius: 6px;
 
-          & {
-            background: ${(props) => (props.disabled === true ? 'var(--sub-color)' : 'var(--main-color)')};
-          }
-
           &:active:not(:disabled) {
-            background: var(--point-color);
+            background: ${(props) => props.activeBgColor};
           }
         `;
 
