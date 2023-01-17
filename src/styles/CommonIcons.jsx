@@ -9,6 +9,7 @@ import HEART_OFF_ICON from 'assets/icons/heart_off.png';
 import NOTICE_REPORT from '../assets/icons/알림목록_신고.png';
 import NOTICE_EVALUATE from '../assets/icons/알림목록_작성한글평가.png';
 import NOTICE_ASSESSMENT_CLOSING from '../assets/icons/알림목록_평가한글마감.png';
+import CREATE_POST_FAB from '../assets/icons/게시글작성.png';
 
 export {
   HOME_ON_ICON,
@@ -22,4 +23,5 @@ export {
   NOTICE_REPORT,
   NOTICE_EVALUATE,
   NOTICE_ASSESSMENT_CLOSING,
+  CREATE_POST_FAB,
 };
