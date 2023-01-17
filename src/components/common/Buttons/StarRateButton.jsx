@@ -11,7 +11,6 @@ const getLabelText = (value) => {
 const StarRateButton = () => {
   // 읽는 기능만 존재할 경우 name='half-rating-read' 하고 readOnly props 추가
   const [value, setValue] = useState(0);
-  const [hover, setHover] = useState(-1);
 
   return (
     <StyleStack spacing={1}>
