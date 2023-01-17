@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { CROWN } from '../../../styles/CommonImages';
-import EmotionButton from '../Buttons/EmotionButton';
+import { CROWN } from '../../styles/CommonImages';
+import EmotionButton from '../common/Buttons/EmotionButton';
 import styled from 'styled-components';
 
 const EmotionKeywordCard = () => {
   // 임시 더미 데이터
   const data = [
-    { title: '평범해요', count: 2 },
-    { title: '좋아요', count: 3 },
-    { title: '이상해요', count: 0 },
-    { title: '속상해요', count: 6 },
-    { title: '별로에요', count: 100 },
-    { title: '당황스러워요', count: 14 },
+    { title: '평범해요', count: 100 },
+    { title: '좋아요', count: 110 },
+    { title: '이상해요', count: 130 },
+    { title: '속상해요', count: 200 },
+    { title: '별로에요', count: 10 },
+    { title: '당황스러워요', count: 10 },
   ];
 
   const totalCount = (data) => {
@@ -33,6 +33,12 @@ const EmotionKeywordCard = () => {
     return data.findIndex((object) => object.count === FIND_MAX_COUNT);
   };
 
+  const maxCountRateWidth = (data) => {
+    return 1 / (findMaxCount(data) / totalCount(data));
+  };
+
+  const MAX_COUNT_RATE_WIDTH = maxCountRateWidth(data);
+
   return (
     <StyleCard>
       <h3 className='sr-only'>감정키워드 카드</h3>
@@ -47,12 +53,20 @@ const EmotionKeywordCard = () => {
               {index === maxCountIndex(data) ? (
                 <>
                   <StyleStatusText color='var(--point-color)'>{title}</StyleStatusText>
-                  <StyleStatusBar color='var(--point-color)' width={(count / totalCount(data)) * 140 + 'px'} />
+                  <StyleStatusBar
+                    color='var(--point-color)'
+                    width={(count / totalCount(data)) * 100 * MAX_COUNT_RATE_WIDTH + 'px'}
+                  />
+                  <StyleCountText color='var(--point-color)'>{count + '표'}</StyleCountText>
                 </>
               ) : (
                 <>
                   <StyleStatusText color='var(--main-color)'>{title}</StyleStatusText>
-                  <StyleStatusBar color='var(--main-color)' width={(count / totalCount(data)) * 140 + 'px'} />
+                  <StyleStatusBar
+                    color='var(--main-color)'
+                    width={(count / totalCount(data)) * 100 * MAX_COUNT_RATE_WIDTH + 'px'}
+                  />
+                  <StyleCountText color='var(--main-color)'>{count + '표'}</StyleCountText>
                 </>
               )}
             </StyleStatus>
@@ -117,6 +131,12 @@ const StyleStatusText = styled.span`
   font-weight: 500;
   font-size: 12px;
   color: ${(props) => props.color};
+`;
+
+const StyleCountText = styled(StyleStatusText)`
+  margin-left: 2px;
+  font-size: 10px;
+  width: 32px;
 `;
 
 const StyleStatusBar = styled.div`
