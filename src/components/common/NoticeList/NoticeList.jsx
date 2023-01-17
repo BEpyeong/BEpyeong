@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { NOTICE_REPORT, NOTICE_EVALUATE, NOTICE_ASSESSMENT_CLOSING } from '../../../styles/CommonIcons';
 
@@ -7,27 +8,27 @@ const Notice = () => {
     <StyleNoticeListWrapper>
       <StyleNoticeListLi>
         <img src={NOTICE_EVALUATE} alt='' />
-        <a href='#'>
+        <Link to=''>
           <p>작성한 글 에 새로운 평가가 등록되었어요.</p>
-        </a>
+        </Link>
       </StyleNoticeListLi>
       <StyleNoticeListLi>
         <img src={NOTICE_ASSESSMENT_CLOSING} alt='' />
-        <a href='#'>
+        <Link to=''>
           <p>평가한 글 이 마감 되었어요.</p>
-        </a>
+        </Link>
       </StyleNoticeListLi>
       <StyleNoticeListLi>
         <img src={NOTICE_ASSESSMENT_CLOSING} alt='' />
-        <a href='#'>
+        <Link to=''>
           <p>평가한 글 이 마감 되었어요.</p>
-        </a>
+        </Link>
       </StyleNoticeListLi>
       <StyleNoticeListLi>
         <img src={NOTICE_EVALUATE} alt='' />
-        <a href='#'>
+        <Link to=''>
           <p>작성한 글 에 새로운 평가가 등록되었는데요 근데요</p>
-        </a>
+        </Link>
       </StyleNoticeListLi>
     </StyleNoticeListWrapper>
   );
