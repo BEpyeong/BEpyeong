@@ -15,7 +15,7 @@ import {
   GOOD_OFF_EMOTION,
   NOTBAD_ON_EMOTION,
   NOTBAD_OFF_EMOTION,
-} from '../../../styles/CommonImages';
+} from 'styles/CommonImages.jsx';
 
 // 클릭가능여부(possibleClicked), 처음렌더될 이미지를 클릭된 이미지로 할지 선택(clickedImg), 텍스트여부(isText), 감정키워드(emotionTitle) 을 props 로 받아서 각 상황에 맞는 버튼을 렌더한다.
 

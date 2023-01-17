@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { CROWN } from '../../styles/CommonImages';
-import EmotionButton from '../common/Buttons/EmotionButton';
+import { CROWN } from 'styles/CommonImages';
+import EmotionButton from 'common/Buttons/EmotionButton';
 import styled from 'styled-components';
 
 const EmotionKeywordCard = () => {
