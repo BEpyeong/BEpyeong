@@ -1,5 +1,5 @@
 import React from 'react';
-import { HEART_ON_ICON, HEART_OFF_ICON } from '../../../styles/CommonIcons';
+import { HEART_ON_ICON, HEART_OFF_ICON } from 'styles/CommonIcons';
 import { useState } from 'react';
 import styled from 'styled-components';
 

@@ -8,7 +8,7 @@ import {
   FAVORITES_OFF_ICON,
   MYPAGE_ON_ICON,
   MYPAGE_OFF_ICON,
-} from '../../../styles/CommonIcons';
+} from 'styles/CommonIcons';
 
 const TabBar = ({ tabPage = 'Tab_Home' }) => {
   const tabList = [
