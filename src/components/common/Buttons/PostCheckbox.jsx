@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { CHECK_KEYWORD_OFF, CHECK_KEYWORD_ON } from 'styles/CommonIcons';
+import { Checkbox } from '@mui/material';
+import { pink } from '@mui/material/colors';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
-const PostCheckbox = () => {
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+const PostCheckbox = ({ label, checked, handleChange }) => {
   // const [isChecked, setIsChecked] = useState(false);
 
   const [checkKeywordList, setCheckKeywordList] = useState([
@@ -31,12 +38,34 @@ const PostCheckbox = () => {
   return (
     <StyleCheckKeywordWrapper>
       {checkKeywordList.map((checkList, index) => {
-        console.log('test');
-
         return (
-          <StyleCheckButton checkList={checkList} key={checkList.id}>
-            <img src={CHECK_KEYWORD_ON} alt='' />
-            <StyleKeyword>{checkList.checkKeyword}</StyleKeyword>
+          <StyleCheckButton component='fieldset' checkList={checkList} key={checkList.id}>
+            <FormGroup aria-label='position' row>
+              <FormControlLabel
+                value='top'
+                control={
+                  <Checkbox
+                    {...label}
+                    // defaultChecked
+                    sx={{
+                      color: pink[200],
+                      '&.Mui-checked': {
+                        color: pink[200],
+                      },
+                    }}
+                    checked={checked}
+                    onClick={() => {
+                      const count = 0;
+                      console.log(count % 2 === 0 ? '체크됨' : '체크해제됨');
+                    }}
+                    onChange={handleChange}
+                    inputProps={{ 'aria-label': 'controlled' }}
+                  />
+                }
+                label={checkList.checkKeyword}
+                labelPlacement='end'
+              />
+            </FormGroup>
           </StyleCheckButton>
         );
       })}
@@ -58,18 +87,10 @@ const StyleCheckButton = styled.button`
   border: 2px solid transparent;
   background-color: var(--sub-color);
   color: var(--main-color);
-  padding: 12px;
-
-  img {
-    width: 14px;
-    height: 14px;
-  }
+  padding: 4px 0px 4px 14px;
 
   &:checked {
-    border: 2px solid var(--main-color);
+    /* border: 2px solid var(--main-color); */
+    border: 2px solid red;
   }
-`;
-
-const StyleKeyword = styled.span`
-  margin-left: 8px;
 `;
