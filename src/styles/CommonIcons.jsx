@@ -9,6 +9,12 @@ import HEART_OFF_ICON from 'assets/icons/heart_off.png';
 import NOTICE_REPORT from '../assets/icons/알림목록_신고.png';
 import NOTICE_EVALUATE from '../assets/icons/알림목록_작성한글평가.png';
 import NOTICE_ASSESSMENT_CLOSING from '../assets/icons/알림목록_평가한글마감.png';
+import CREATE_POST_FAB from '../assets/icons/게시글작성.png';
+import SEARCH_ICON from 'assets/icons/icon_검색.png';
+import BACK_ICON from 'assets/icons/icon_뒤로가기.png';
+import ALARM_ICON from 'assets/icons/icon_알림.png';
+import CHECK_ICON from 'assets/icons/icon_체크.png';
+import HAMBURGER_ICON from 'assets/icons/icon_햄버거.png';
 
 export {
   HOME_ON_ICON,
@@ -22,4 +28,10 @@ export {
   NOTICE_REPORT,
   NOTICE_EVALUATE,
   NOTICE_ASSESSMENT_CLOSING,
+  CREATE_POST_FAB,
+  SEARCH_ICON,
+  BACK_ICON,
+  ALARM_ICON,
+  CHECK_ICON,
+  HAMBURGER_ICON,
 };
