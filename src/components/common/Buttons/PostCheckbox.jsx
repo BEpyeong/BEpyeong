@@ -54,10 +54,6 @@ const PostCheckbox = ({ label, checked, handleChange }) => {
                       },
                     }}
                     checked={checked}
-                    onClick={() => {
-                      const count = 0;
-                      console.log(count % 2 === 0 ? '체크됨' : '체크해제됨');
-                    }}
                     onChange={handleChange}
                     inputProps={{ 'aria-label': 'controlled' }}
                   />
@@ -90,7 +86,6 @@ const StyleCheckButton = styled.button`
   padding: 4px 0px 4px 14px;
 
   &:checked {
-    /* border: 2px solid var(--main-color); */
-    border: 2px solid red;
+    border: 2px solid var(--main-color);
   }
 `;
