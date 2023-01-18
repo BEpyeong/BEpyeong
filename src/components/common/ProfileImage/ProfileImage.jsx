@@ -5,10 +5,15 @@ import { PROFILE_DEFAULT } from 'styles/CommonImages';
 
 const ProfileImage = ({ src, alt = '', borderWeight = '4' }) => {
   return (
-    <StyleProfileWrapper>
-      <UserProfileImage src={PROFILE_DEFAULT} alt={alt} width={`110`} borderWeight={borderWeight} />
-      <UploadFileIcon src={PROFILE_UPLOAD} />
-    </StyleProfileWrapper>
+    <>
+      <label htmlFor='profileImg'>
+        <StyleProfileWrapper>
+          <UserProfileImage src={PROFILE_DEFAULT} alt={alt} width={`110`} borderWeight={borderWeight} />
+          <UploadFileIcon src={PROFILE_UPLOAD} />
+        </StyleProfileWrapper>
+      </label>
+      <input className='sr-only' type='file' id='profileImg' accept='image/*' />
+    </>
   );
 };
 
@@ -26,6 +31,7 @@ const UserProfileImage = styled.img`
   height: 110px;
   border: ${(props) => props.borderWeight}px solid var(--border-color);
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 const UploadFileIcon = styled.img`
@@ -35,4 +41,5 @@ const UploadFileIcon = styled.img`
   width: 36px;
   height: 36px;
   z-index: 10;
+  cursor: pointer;
 `;
