@@ -11,8 +11,8 @@ const StarRateButton = ({ defaultStar, isReadOnly = false }) => {
   return (
     <>
       {isReadOnly ? (
-        <StyleStack spacing={1}>
-          <StyleRating name='half-rating' defaultValue={0.5} precision={0.5} value={defaultStar} readOnly />
+        <StyleStack spacing={0}>
+          <StyleOnlyReadRating name='half-rating' defaultValue={0.5} precision={0.5} value={defaultStar} readOnly />
         </StyleStack>
       ) : (
         <StyleStack spacing={1}>
@@ -47,5 +47,12 @@ const StyleRating = styled(Rating)`
   svg {
     width: 44px;
     height: 44px;
+  }
+`;
+
+const StyleOnlyReadRating = styled(StyleRating)`
+  svg {
+    width: 14px;
+    height: 14px;
   }
 `;
