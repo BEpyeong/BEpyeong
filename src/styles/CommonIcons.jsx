@@ -17,6 +17,10 @@ import BACK_ICON from 'assets/icons/icon_뒤로가기.png';
 import ALARM_ICON from 'assets/icons/icon_알림.png';
 import CHECK_ICON from 'assets/icons/icon_체크.png';
 import HAMBURGER_ICON from 'assets/icons/icon_햄버거.png';
+import FEED_ICON_BEST from 'assets/icons/FeedIcon_best.png';
+import FEED_ICON_DATE from 'assets/icons/FeedIcon_date.png';
+import FEED_ICON_THUMB from 'assets/icons/FeedIcon_thumb.png';
+import FEED_ICON_VOTE_DATE from 'assets/icons/FeedIcon_voteDate.png';
 
 export {
   HOME_ON_ICON,
@@ -38,4 +42,8 @@ export {
   ALARM_ICON,
   CHECK_ICON,
   HAMBURGER_ICON,
+  FEED_ICON_BEST,
+  FEED_ICON_DATE,
+  FEED_ICON_THUMB,
+  FEED_ICON_VOTE_DATE,
 };
