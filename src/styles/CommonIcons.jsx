@@ -18,6 +18,8 @@ import ALARM_ICON from 'assets/icons/icon_알림.png';
 import CHECK_ICON from 'assets/icons/icon_체크.png';
 import HAMBURGER_ICON from 'assets/icons/icon_햄버거.png';
 import CALENDAR_ICON from 'assets/icons/게시글_달력.png';
+import POST_IMG_ADD from 'assets/icons/게시글_사진추가.png';
+import POST_IMG_DEL from 'assets/icons/게시글_사진삭제.png';
 
 export {
   HOME_ON_ICON,
@@ -40,4 +42,6 @@ export {
   CHECK_ICON,
   HAMBURGER_ICON,
   CALENDAR_ICON,
+  POST_IMG_ADD,
+  POST_IMG_DEL,
 };
