@@ -6,9 +6,9 @@ const PostImgAddButton = () => {
   return (
     <>
       <label htmlFor='postImg'>
-        <StylePostImgAdd src={POST_IMG_ADD} />
+        <StylePostImgAdd src={POST_IMG_ADD} alt='' />
+        <input className='sr-only' type='file' id='postImg' accept='image/*' />
       </label>
-      <input className='sr-only' type='file' id='postImg' accept='image/*' />
     </>
   );
 };
@@ -18,5 +18,6 @@ export default PostImgAddButton;
 const StylePostImgAdd = styled.img`
   width: 60px;
   height: 60px;
+  margin-top: 3px;
   cursor: pointer;
 `;
