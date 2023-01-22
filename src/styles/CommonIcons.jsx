@@ -21,6 +21,9 @@ import FEED_ICON_BEST from 'assets/icons/FeedIcon_best.png';
 import FEED_ICON_DATE from 'assets/icons/FeedIcon_date.png';
 import FEED_ICON_THUMB from 'assets/icons/FeedIcon_thumb.png';
 import FEED_ICON_VOTE_DATE from 'assets/icons/FeedIcon_voteDate.png';
+import CALENDAR_ICON from 'assets/icons/게시글_달력.png';
+import POST_IMG_ADD from 'assets/icons/게시글_사진추가.png';
+import POST_IMG_DEL from 'assets/icons/게시글_사진삭제.png';
 
 export {
   HOME_ON_ICON,
@@ -46,4 +49,7 @@ export {
   FEED_ICON_DATE,
   FEED_ICON_THUMB,
   FEED_ICON_VOTE_DATE,
+  CALENDAR_ICON,
+  POST_IMG_ADD,
+  POST_IMG_DEL,
 };
