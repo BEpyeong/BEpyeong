@@ -12,6 +12,7 @@ import NOTBAD_ON_EMOTION from 'assets/images/평범해요_on.png';
 import NOTBAD_OFF_EMOTION from 'assets/images/평범해요_off.png';
 import CROWN from 'assets/images/crown.png';
 import LOGO from 'assets/images/logo.png';
+import PROFILE_DEFAULT from 'assets/images/프로필_기본.png';
 
 export {
   EMBARRASSMENT_ON_EMOTION,
@@ -28,4 +29,5 @@ export {
   NOTBAD_OFF_EMOTION,
   CROWN,
   LOGO,
+  PROFILE_DEFAULT,
 };

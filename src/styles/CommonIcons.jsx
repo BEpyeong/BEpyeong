@@ -24,6 +24,7 @@ import FEED_ICON_VOTE_DATE from 'assets/icons/FeedIcon_voteDate.png';
 import CALENDAR_ICON from 'assets/icons/게시글_달력.png';
 import POST_IMG_ADD from 'assets/icons/게시글_사진추가.png';
 import POST_IMG_DEL from 'assets/icons/게시글_사진삭제.png';
+import PROFILE_UPLOAD from 'assets/icons/프로필업로드.png';
 
 export {
   HOME_ON_ICON,
@@ -52,4 +53,5 @@ export {
   CALENDAR_ICON,
   POST_IMG_ADD,
   POST_IMG_DEL,
+  PROFILE_UPLOAD,
 };
