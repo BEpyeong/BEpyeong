@@ -11,13 +11,14 @@ const JoinMembershipPage = () => {
         <StyleTitle>{'회원가입'}</StyleTitle>
         <StyleSubTitle>{'나중에 언제든지 변경할 수 있습니다.'}</StyleSubTitle>
         <ProfileImage />
-        <Input labelText='이메일' placeholder='이메일 주소를 입력해주세요.' />
-        <Input labelText='비밀번호' placeholder='비밀번호를 설정해 주세요.' />
-        <Input labelText='사용자 이름' placeholder='2~8자 이내여야 합니다.' />
-        <Input labelText='소개' placeholder='자신에 대해 소개해 주세요!' />
-        <BasicButton size='M' isActive={false} disabled={true}>
-          {'BE평 시작하기'}
-        </BasicButton>
+        <form onSubmit>
+          <Input labelText='이메일' placeholder='이메일 주소를 입력해주세요.' />
+          <Input labelText='비밀번호' placeholder='비밀번호를 설정해 주세요.' />
+          <Input labelText='사용자 이름' placeholder='2~8자 이내여야 합니다.' />
+          <BasicButton size='M' isActive={false} disabled={true} type='submit'>
+            {'BE평 시작하기'}
+          </BasicButton>
+        </form>
       </StyleWrapper>
     </>
   );
