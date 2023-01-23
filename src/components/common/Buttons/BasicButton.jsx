@@ -11,6 +11,7 @@ const BasicButton = ({
   type,
   onClickHandler,
   isActive = true,
+  className,
 }) => {
   return (
     <StyledButton
@@ -22,6 +23,7 @@ const BasicButton = ({
       type={type}
       onClick={onClickHandler}
       isActive={isActive}
+      className={className}
     >
       {children}
     </StyledButton>
@@ -30,7 +32,7 @@ const BasicButton = ({
 
 export default BasicButton;
 
-const ButtonSize = css`
+export const ButtonSize = css`
   ${({ size }) => {
     switch (size) {
       case 'L':
@@ -84,7 +86,7 @@ const ButtonSize = css`
 `;
 
 // 버튼의 기본 스타일
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   ${ButtonSize}
   margin: 0 auto;
   outline: none;
