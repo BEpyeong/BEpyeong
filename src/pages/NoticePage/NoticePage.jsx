@@ -7,22 +7,17 @@ import styled from 'styled-components';
 
 const NoticePage = () => {
   return (
-    <NoticeMain>
+    <>
       <TabPageAppBar isTapPage={false} tabPageName='알림함' btnList={['체크']} />
       <ContentsLayout padding='0'>
         <NoticeList />
       </ContentsLayout>
       <NoticeCheckButton size='L'>전체확인</NoticeCheckButton>
-    </NoticeMain>
+    </>
   );
 };
 
 export default NoticePage;
-
-const NoticeMain = styled.main`
-  display: flex;
-  flex-direction: column;
-`;
 
 const NoticeCheckButton = styled(BasicButton)`
   width: 350px;
