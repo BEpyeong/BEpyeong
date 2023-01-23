@@ -91,5 +91,5 @@ const StyledButton = styled.button`
   box-sizing: border-box;
   font-size: var(--fs-lg);
   color: ${(props) => props.textColor};
-  background: ${(props) => props.backgroundColor};
+  background: ${(props) => (props.disabled ? 'var(--sub-color)' : props.backgroundColor)};
 `;
