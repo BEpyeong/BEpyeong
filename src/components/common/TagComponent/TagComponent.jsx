@@ -30,8 +30,11 @@ export default TagComponent;
 const StyleTagWrapper = styled.article`
   display: flex;
   align-items: center;
-  padding: 16px 16px 0px;
-  height: 46px;
+  position: fixed;
+  padding: 16px 16px;
+  height: 62px;
+  width: 390px;
+  background-color: var(--main-bg-color);
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -39,4 +42,5 @@ const StyleTagWrapper = styled.article`
     display: none; /* Chrome, Safari, Opera*/
   }
   white-space: nowrap;
+  z-index: 100;
 `;
