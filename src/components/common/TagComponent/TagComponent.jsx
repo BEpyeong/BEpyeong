@@ -2,7 +2,6 @@ import { check } from 'prettier';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { TAG_DELETE_ON_ICON, TAG_DELETE_OFF_ICON, TAG_PLUS_ON_ICON, TAG_PLUS_OFF_ICON } from 'styles/CommonIcons';
 import AddTagButton from '../Buttons/Tag/AddTagButton';
 import KeywordTagButton from '../Buttons/Tag/KeywordTagButton';
 
@@ -10,17 +9,7 @@ const TagComponent = () => {
   return (
     <StyleTagWrapper>
       <AddTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
-      <KeywordTagButton />
+      <KeywordTagButton disabled={true}>{'전체'}</KeywordTagButton>
     </StyleTagWrapper>
   );
 };
