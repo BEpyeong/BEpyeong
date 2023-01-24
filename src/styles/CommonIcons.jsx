@@ -32,6 +32,8 @@ import TAG_DELETE_ON_ICON from 'assets/icons/태그_삭제_ON.png';
 import TAG_DELETE_OFF_ICON from 'assets/icons/태그_삭제_OFF.png';
 import TAG_PLUS_ON_ICON from 'assets/icons/plus_icon_on.png';
 import TAG_PLUS_OFF_ICON from 'assets/icons/plus_icon.png';
+import LIKE_OFF_ICON from 'assets/icons/좋아요.png';
+import LIKE_ON_ICON from 'assets/icons/좋아요_on.png';
 
 export {
   HOME_ON_ICON,
@@ -68,4 +70,6 @@ export {
   TAG_DELETE_OFF_ICON,
   TAG_PLUS_ON_ICON,
   TAG_PLUS_OFF_ICON,
+  LIKE_OFF_ICON,
+  LIKE_ON_ICON,
 };
