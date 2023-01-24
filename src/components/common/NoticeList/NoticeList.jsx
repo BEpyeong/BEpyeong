@@ -2,34 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { NOTICE_REPORT, NOTICE_EVALUATE, NOTICE_ASSESSMENT_CLOSING } from '../../../styles/CommonIcons';
+import BasicButton from '../Buttons/BasicButton';
 
-const NoticeList = () => {
+const NoticeList = ({ children, title, img, isNoticePage = true }) => {
+  // 평가했을 때, img --> NOTICE_EVALUATE
+  // 마감됐을 때, img --> NOTICE_ASSESSMENT_CLOSING
+  // 신고접수 떄, img --> NOTICE_REPORT
+
+  const noticeIconList = [
+    { id: 0, title: '평가', img: NOTICE_EVALUATE },
+    { id: 1, title: '마감', img: NOTICE_ASSESSMENT_CLOSING },
+    { id: 2, title: '신고', img: NOTICE_REPORT },
+  ];
+
   return (
     <StyleNoticeListWrapper>
-      <StyleNoticeListLi>
-        <img src={NOTICE_EVALUATE} alt='' />
-        <Link to=''>
-          <p>작성한 글 에 새로운 평가가 등록되었어요.</p>
-        </Link>
-      </StyleNoticeListLi>
-      <StyleNoticeListLi>
-        <img src={NOTICE_ASSESSMENT_CLOSING} alt='' />
-        <Link to=''>
-          <p>평가한 글 이 마감 되었어요.</p>
-        </Link>
-      </StyleNoticeListLi>
-      <StyleNoticeListLi>
-        <img src={NOTICE_ASSESSMENT_CLOSING} alt='' />
-        <Link to=''>
-          <p>평가한 글 이 마감 되었어요.</p>
-        </Link>
-      </StyleNoticeListLi>
-      <StyleNoticeListLi>
-        <img src={NOTICE_EVALUATE} alt='' />
-        <Link to=''>
-          <p>작성한 글 에 새로운 평가가 등록되었는데요 근데요</p>
-        </Link>
-      </StyleNoticeListLi>
+      {isNoticePage ? (
+        <StyleNoticeListLi>
+          <img src={NOTICE_REPORT} alt={title + ' 아이콘'} />
+          <Link to=''>{children}</Link>
+          <BasicButton size='XS'>삭제</BasicButton>
+        </StyleNoticeListLi>
+      ) : (
+        <StyleNoticeListLi>
+          <img src={NOTICE_EVALUATE} alt={title + ' 아이콘'} />
+          <Link to=''>{children}</Link>
+        </StyleNoticeListLi>
+      )}
     </StyleNoticeListWrapper>
   );
 };
@@ -38,6 +37,12 @@ export default NoticeList;
 
 const StyleNoticeListWrapper = styled.ul`
   width: 100%;
+  &:nth-child(2n) {
+    background-color: var(--bg-color);
+  }
+  &:nth-child(2n-1) {
+    background-color: var(--sub-color);
+  }
 `;
 
 const StyleNoticeListLi = styled.li`
@@ -48,13 +53,6 @@ const StyleNoticeListLi = styled.li`
   padding: 22px;
   font-size: var(--fs-md);
   color: var(--main-color);
-
-  &:nth-child(2n) {
-    background-color: var(--bg-color);
-  }
-  &:nth-child(2n-1) {
-    background-color: var(--sub-color);
-  }
 
   > img {
     width: 40px;
@@ -76,6 +74,6 @@ const StyleNoticeListLi = styled.li`
   }
 
   button {
-    margin-left: auto;
+    margin: 0 0 0 auto;
   }
 `;
