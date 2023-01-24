@@ -25,6 +25,8 @@ import CALENDAR_ICON from 'assets/icons/게시글_달력.png';
 import POST_IMG_ADD from 'assets/icons/게시글_사진추가.png';
 import POST_IMG_DEL from 'assets/icons/게시글_사진삭제.png';
 import PROFILE_UPLOAD from 'assets/icons/프로필업로드.png';
+import SEARCHED_LIST_SEARCH_ICON from 'assets/icons/검색리스트_아이콘.png';
+import SEARCHED_LIST_DELETE_ICON from 'assets/icons/검색리스트_삭제_아이콘.png';
 
 export {
   HOME_ON_ICON,
@@ -54,4 +56,6 @@ export {
   POST_IMG_ADD,
   POST_IMG_DEL,
   PROFILE_UPLOAD,
+  SEARCHED_LIST_SEARCH_ICON,
+  SEARCHED_LIST_DELETE_ICON,
 };
