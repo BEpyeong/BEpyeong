@@ -1,37 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const CategoryList = ({ another }) => {
-  another = [];
-
-  // 언젠가 추가될 another의 글 리스트 갯수가 1개 이상이라도 생기면
-  // 해당 목록의 마지막 라인에 리스트 추가해 주고, 추가할게 없으면 그냥 두기
+const CategoryList = ({ another = [], children }) => {
+  // another = [] 안에 '광고 배너 관리' 와 같이 문자열 요소를 적어넣으면 리스트가 하나씩 생성됩니다.
+  // 새로운 목록을 만들고 싶을 땐, import 한 곳에 <CategoryList anoth={['', '']}/> 를 추가로 작성해주세요.
 
   return (
     <>
-      <ListWrapper>
-        <ListItem>작성한 글 목록</ListItem>
-        <ListItem>평가한 글 목록</ListItem>
-        {another.length ? another.map((data, index) => <ListItem key={index}>{data}</ListItem>) : <></>}
-      </ListWrapper>
-
-      <ListWrapper>
-        <ListItem>개인정보 변경</ListItem>
-        {another.length ? another.map((data, index) => <ListItem key={index}>{data}</ListItem>) : <></>}
-      </ListWrapper>
-
-      <ListWrapper>
-        <ListItem>이용문의</ListItem>
-        <ListItem>이용정보</ListItem>
-        {another.length ? another.map((data, index) => <ListItem key={index}>{data}</ListItem>) : <></>}
-      </ListWrapper>
+      {
+        <ListWrapper>
+          {another.length ? (
+            another.map((data, index) => (
+              <ListItem key={index}>
+                <Link to=''>{data}</Link>
+              </ListItem>
+            ))
+          ) : (
+            <></>
+          )}
+        </ListWrapper>
+      }
     </>
   );
 };
 
 export default CategoryList;
 
-const ListWrapper = styled.ul`
+export const ListWrapper = styled.ul`
   width: 358px;
   margin: 0 auto 16px;
   border-radius: 8px;
@@ -42,7 +38,7 @@ const ListWrapper = styled.ul`
   }
 `;
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
   display: flex;
   align-items: center;
   height: 86px;
