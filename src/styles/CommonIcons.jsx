@@ -25,6 +25,7 @@ import CALENDAR_ICON from 'assets/icons/게시글_달력.png';
 import POST_IMG_ADD from 'assets/icons/게시글_사진추가.png';
 import POST_IMG_DEL from 'assets/icons/게시글_사진삭제.png';
 import PROFILE_UPLOAD from 'assets/icons/프로필업로드.png';
+import MYPAGE_PROFILE_MODIFY from 'assets/icons/마이페이지_프로필수정.png';
 
 export {
   HOME_ON_ICON,
@@ -54,4 +55,5 @@ export {
   POST_IMG_ADD,
   POST_IMG_DEL,
   PROFILE_UPLOAD,
+  MYPAGE_PROFILE_MODIFY,
 };

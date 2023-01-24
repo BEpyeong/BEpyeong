@@ -13,6 +13,7 @@ import NOTBAD_OFF_EMOTION from 'assets/images/평범해요_off.png';
 import CROWN from 'assets/images/crown.png';
 import LOGO from 'assets/images/logo.png';
 import PROFILE_DEFAULT from 'assets/images/프로필_기본.png';
+import MYPAGE_DEFAULT_PROFILE from 'assets/images/마이페이지_기본프로필.png';
 
 export {
   EMBARRASSMENT_ON_EMOTION,
@@ -30,4 +31,5 @@ export {
   CROWN,
   LOGO,
   PROFILE_DEFAULT,
+  MYPAGE_DEFAULT_PROFILE,
 };
