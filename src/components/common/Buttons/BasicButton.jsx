@@ -37,7 +37,7 @@ export const ButtonSize = css`
     switch (size) {
       case 'L':
         return css`
-          width: 100%;
+          width: 350px;
           height: 56px;
           border-radius: 16px;
 
