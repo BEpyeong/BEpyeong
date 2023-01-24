@@ -28,6 +28,10 @@ import PROFILE_UPLOAD from 'assets/icons/프로필업로드.png';
 import MYPAGE_PROFILE_MODIFY from 'assets/icons/마이페이지_프로필수정.png';
 import SEARCHED_LIST_SEARCH_ICON from 'assets/icons/검색리스트_아이콘.png';
 import SEARCHED_LIST_DELETE_ICON from 'assets/icons/검색리스트_삭제_아이콘.png';
+import TAG_DELETE_ON_ICON from 'assets/icons/태그_삭제_ON.png';
+import TAG_DELETE_OFF_ICON from 'assets/icons/태그_삭제_OFF.png';
+import TAG_PLUS_ON_ICON from 'assets/icons/plus_icon_on.png';
+import TAG_PLUS_OFF_ICON from 'assets/icons/plus_icon.png';
 
 export {
   HOME_ON_ICON,
@@ -60,4 +64,8 @@ export {
   MYPAGE_PROFILE_MODIFY,
   SEARCHED_LIST_SEARCH_ICON,
   SEARCHED_LIST_DELETE_ICON,
+  TAG_DELETE_ON_ICON,
+  TAG_DELETE_OFF_ICON,
+  TAG_PLUS_ON_ICON,
+  TAG_PLUS_OFF_ICON,
 };

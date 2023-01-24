@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Feed from './Feed/Feed';
 
-const FeedList = () => {
+const FeedList = ({ isTag = true }) => {
   return (
-    <StyleWrapper>
+    <StyleWrapper isTag={isTag}>
       <StyleUl>
         <Feed key={''} />
         <Feed key={''} />
@@ -23,7 +23,8 @@ export default FeedList;
 const StyleWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 8px 16px 0px 16px;
+  padding: 0px 16px;
+  margin-top: ${(props) => (props.isTag ? '62px' : '0px')};
 `;
 
 const StyleUl = styled.ul`
