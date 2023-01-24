@@ -4,16 +4,23 @@ import styled from 'styled-components';
 
 import { TAG_DELETE_ON_ICON, TAG_DELETE_OFF_ICON } from 'styles/CommonIcons';
 
-const KeywordTagButton = () => {
+const KeywordTagButton = ({ children, disabled = false }) => {
   const [isOnButton, setIsOnButton] = useState(false);
+  const onClickHandler = () => {
+    setIsOnButton(!isOnButton);
+  };
   return (
-    <StyleTag isOnButton={isOnButton} onClick={() => setIsOnButton(!isOnButton)}>
+    <StyleTag isOnButton={disabled ? !isOnButton : isOnButton} onClick={onClickHandler} disabled={disabled}>
       <input type='checkbox' id='keyword' className='sr-only' />
       <label htmlFor='keyword' className='sr-only' />
-      {'감정'}
-      <button>
-        <img src={isOnButton ? TAG_DELETE_ON_ICON : TAG_DELETE_OFF_ICON} alt='삭제버튼 아이콘' />
-      </button>
+      {children}
+      {disabled ? (
+        <></>
+      ) : (
+        <button>
+          <img src={isOnButton ? TAG_DELETE_ON_ICON : TAG_DELETE_OFF_ICON} alt='삭제버튼 아이콘' />
+        </button>
+      )}
     </StyleTag>
   );
 };
@@ -32,6 +39,7 @@ const StyleTag = styled.button`
   color: ${(props) => (props.isOnButton ? 'var(--main-bg-color)' : 'var(--main-color)')};
   background-color: ${(props) => (props.isOnButton ? 'var(--main-color)' : 'var(--main-bg-color)')};
   border: 1px solid var(--main-color);
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
   /* transition: all 0.3s; */
 
   &:hover,
