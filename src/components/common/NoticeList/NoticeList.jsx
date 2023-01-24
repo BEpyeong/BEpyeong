@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { NOTICE_REPORT, NOTICE_EVALUATE, NOTICE_ASSESSMENT_CLOSING } from '../../../styles/CommonIcons';
 
-const Notice = () => {
+const NoticeList = () => {
   return (
     <StyleNoticeListWrapper>
       <StyleNoticeListLi>
@@ -34,7 +34,7 @@ const Notice = () => {
   );
 };
 
-export default Notice;
+export default NoticeList;
 
 const StyleNoticeListWrapper = styled.ul`
   width: 100%;

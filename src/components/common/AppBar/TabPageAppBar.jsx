@@ -40,7 +40,7 @@ const StyleAppBarWrapper = styled.header`
   height: 48px;
   padding: 0.8em 1.2em 0.8em 1.6em;
   z-index: 100;
-  background-color: transparent;
+  background-color: var(--main-bg-color);
 `;
 
 const StyleTapPageTitle = styled.h1`
